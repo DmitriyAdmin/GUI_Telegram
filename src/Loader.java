@@ -14,6 +14,7 @@ public class Loader
                         System.exit(0);
                     }
                 });
+
                 myFrame.setVisible(true);
             }
     }
