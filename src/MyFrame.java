@@ -1,5 +1,6 @@
 import fake.TelegramApiBridge;
 import intro.PhoneNumberForm;
+import intro.RegistrationForm;
 import intro.SmsCodeForm;
 import org.javagram.response.AuthCheckedPhone;
 import undecorated.ComponentResizerAbstract;
@@ -19,6 +20,7 @@ public class MyFrame extends JFrame
         private Component panel = new JScrollPane();
         private PhoneNumberForm phoneNumberForm = new PhoneNumberForm();
         private SmsCodeForm smsCodeForm = new SmsCodeForm();
+        private RegistrationForm registrationForm = new RegistrationForm();
         private TelegramApiBridge bridge = new TelegramApiBridge("", 1, "");
 
         public MyFrame() throws IOException
@@ -45,7 +47,8 @@ public class MyFrame extends JFrame
                                         {
                                             AuthCheckedPhone checkedPhone = bridge.authCheckPhone(phone);
                                             if(checkedPhone.isRegistered())
-                                                setContentPanel(smsCodeForm);
+                                                setContentPanel(registrationForm);
+                                                //setContentPanel(smsCodeForm);
                                         }
                                     catch(IOException e1)
                                         {

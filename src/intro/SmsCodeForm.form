@@ -2,10 +2,77 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="intro.SmsCodeForm">
   <grid id="27dc6" binding="rootPanel" custom-create="true" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="728" height="642"/>
     </constraints>
     <properties/>
     <border type="none"/>
-    <children/>
+    <children>
+      <component id="28c05" class="javax.swing.JTextPane" binding="textPane">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <disabledTextColor color="-16777216"/>
+          <editable value="false"/>
+          <enabled value="true"/>
+          <focusable value="false"/>
+          <font name="Times New Roman" size="19" style="0"/>
+          <inheritsPopupMenu value="true"/>
+          <minimumSize width="200" height="70"/>
+          <opaque value="false"/>
+          <preferredSize width="200" height="70"/>
+          <text value="Пожалуйста, введите SMS код в поле ниже:"/>
+        </properties>
+      </component>
+      <component id="f1593" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <minimumSize width="10" height="10"/>
+          <preferredSize width="10" height="10"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="bbd7b" class="javax.swing.JPasswordField" binding="passwordField">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <minimumSize width="200" height="30"/>
+          <preferredSize width="200" height="30"/>
+        </properties>
+      </component>
+      <component id="69228" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <minimumSize width="20" height="20"/>
+          <preferredSize width="20" height="20"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9a164" class="javax.swing.JButton" binding="nextButton">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <maximumSize width="200" height="30"/>
+          <minimumSize width="200" height="30"/>
+          <preferredSize width="200" height="30"/>
+          <text value="Продолжить"/>
+        </properties>
+      </component>
+    </children>
   </grid>
 </form>

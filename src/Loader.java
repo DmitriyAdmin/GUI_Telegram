@@ -8,6 +8,7 @@ public class Loader
             {
                 MyFrame myFrame = new MyFrame();
 
+                myFrame.setAlwaysOnTop(true);
                 myFrame.setLocationRelativeTo(null);
                 myFrame.addWindowListener(new WindowAdapter() {
                     @Override

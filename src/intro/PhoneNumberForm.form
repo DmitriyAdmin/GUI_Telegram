@@ -40,10 +40,11 @@
         <properties>
           <disabledTextColor color="-16777216"/>
           <editable value="false"/>
-          <enabled value="false"/>
+          <enabled value="true"/>
+          <focusable value="false"/>
           <font name="Times New Roman" size="20" style="0"/>
           <minimumSize width="200" height="80"/>
-          <opaque value="true"/>
+          <opaque value="false"/>
           <preferredSize width="200" height="80"/>
           <text value="Пожалуйста, введите номер телефона"/>
         </properties>
