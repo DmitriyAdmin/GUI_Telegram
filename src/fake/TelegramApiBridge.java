@@ -25,7 +25,7 @@ public class TelegramApiBridge
         private String currentPhone;
         private boolean logedIn;
 
-        private static final int AUTH_CODE = 11111;
+        private static final String AUTH_CODE = "11111";
 
         public AuthCheckedPhone authCheckPhone(String phoneNumber) throws IOException
             {
@@ -51,7 +51,7 @@ public class TelegramApiBridge
 
         public AuthAuthorization authSignIn(String smsCode) throws IOException
             {
-                return authSignInOrUp(true, smsCode, "Dmitriy", "Profit");
+                return authSignInOrUp(false, smsCode, "Dmitriy", "Profit");
             }
 
         private AuthAuthorization authSignInOrUp(boolean up, String smsCode, String firstName, String lastName) throws IOException

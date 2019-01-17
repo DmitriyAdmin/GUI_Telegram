@@ -2,6 +2,7 @@ import fake.TelegramApiBridge;
 import intro.PhoneNumberForm;
 import intro.RegistrationForm;
 import intro.SmsCodeForm;
+import org.javagram.response.AuthAuthorization;
 import org.javagram.response.AuthCheckedPhone;
 import undecorated.ComponentResizerAbstract;
 import undecorated.Decoration;
@@ -47,13 +48,39 @@ public class MyFrame extends JFrame
                                         {
                                             AuthCheckedPhone checkedPhone = bridge.authCheckPhone(phone);
                                             if(checkedPhone.isRegistered())
-                                                setContentPanel(registrationForm);
-                                                //setContentPanel(smsCodeForm);
+                                                {
+                                                    setContentPanel(smsCodeForm);
+                                                    bridge.authSendCode(phone);
+                                                }
+                                            else
+                                                {
+                                                    setContentPanel(registrationForm);
+                                                }
                                         }
                                     catch(IOException e1)
                                         {
                                             e1.printStackTrace();
                                         }
+                                }
+                        }
+                });
+
+            smsCodeForm.addNextButtonListener(new ActionListener()
+                {
+                    @Override
+                    public void actionPerformed(ActionEvent e)
+                        {
+                            String smsCode = smsCodeForm.getSmsCode();
+
+                            System.out.println(smsCode);
+                            try
+                                {
+                                    AuthAuthorization authorization = bridge.authSignIn(smsCode);
+                                    setContentPanel(phoneNumberForm);
+                                }
+                            catch(IOException e1)
+                                {
+                                    e1.printStackTrace();
                                 }
                         }
                 });
@@ -65,8 +92,6 @@ public class MyFrame extends JFrame
 
         private void closeWindow()
             {
-
-                // ВАРИАНТ 1 (сведение к windowClosed)
                 setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 undecoratedFrame.addActionListenerForClose(e -> dispose());
                 addWindowListener(new WindowAdapter()

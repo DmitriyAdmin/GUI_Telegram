@@ -82,7 +82,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="a848b" class="javax.swing.JButton" binding="NextButton">
+      <component id="a848b" class="javax.swing.JButton" binding="nextButton">
         <constraints>
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
